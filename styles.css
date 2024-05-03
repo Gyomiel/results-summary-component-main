@@ -1,0 +1,215 @@
+/* Globals */
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /* Primary colors */
+    --primaryLightRed: hsla(0, 100%, 67%, 0.07);
+    --primaryOrangeyYellow: hsla(39, 100%, 56%, 0.07);
+    --primaryGreenTeal: hsla(166, 100%, 37%, 0.07);
+    --primaryCobaltBlue: hsla(234, 85%, 45%, 0.07);
+
+    /* Neutral colors */
+    --white: hsl(0, 0%, 100%);
+    --paleBlue: hsl(221, 100%, 96%);
+    --lightLavender: hsl(241, 100%, 89%);
+    --darkGreyBlue: hsl(224, 30%, 27%);
+
+    /* Background gradients */
+    --bgGrLightSlateBlue: hsl(252, 100%, 67%);
+    --bgGrLightRoyalBlue: hsl(241, 81%, 54%);
+
+    /* Circle gradients */
+    --cirGrVioletBlue: hsla(256, 72%, 46%, 1);
+    --cirGrPersianBlue: hsla(241, 72%, 46%, 0);
+
+}
+
+* {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Results content */
+
+.rcard {
+    max-width: 740px;
+    height: 515px;
+    display: grid;
+    border-radius: 2rem;
+}
+
+.myresult {
+    background: linear-gradient(var(--bgGrLightSlateBlue), var(--bgGrLightRoyalBlue));
+    border-radius: 0 0 2rem 2rem;
+    text-align: center;
+    color: var(--lightLavender);
+}
+
+
+.myresult h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.score {
+    height: 12rem;
+    width: 12rem;
+    background: linear-gradient(var(--cirGrVioletBlue), var(--cirGrPersianBlue));
+    border-radius: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--lightLavender);
+    
+}
+
+.score span {
+    display: block;
+    place-items: center;
+    font-size: 80px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1;
+}
+
+
+.greatscore {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.commentscore {
+    font-weight: 500;
+    color: var(--lightLavender);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Summary contents */
+
+h2 {
+    font-size: 23px;
+    font-weight: 800;
+    margin-top: -0.15rem;
+    margin-bottom: 1.5rem;
+}
+
+.scard {
+    display: flex;
+    flex-direction: column;
+    color: var(--darkGreyBlue);
+    margin: 40px;
+}
+
+.summary-box {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.summary-tcontainer {
+    font-weight: 700;
+}
+
+.tscore span {
+    font-weight: 800;
+    color: var(--darkGreyBlue);
+}
+
+.tscore {
+    color: grey;
+}
+
+.summary-tcontainer img {
+    margin: -4px;
+    margin-right: 10px;
+}
+
+.sb1 {
+    background-color: var(--primaryLightRed);
+    color: hsl(0, 100%, 67%);
+}
+
+.sb2 {
+    background-color: var(--primaryOrangeyYellow);
+    color: hsl(39, 100%, 56%);
+}
+
+.sb3 {
+    background-color: var(--primaryGreenTeal);
+    color: hsl(166, 100%, 37%);
+}
+
+.sb4 {
+    background-color: var(--primaryCobaltBlue);
+    color: hsl(234, 85%, 45%);
+}
+
+/* Button */
+
+button {
+    border: none;
+    background-color: var(--darkGreyBlue);
+    padding: 15px;
+    margin-right: 1rem;
+    border-radius: 40px;
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--bgGrLightSlateBlue), var(--bgGrLightRoyalBlue));
+}
+
+/* Media Query */
+
+@media (min-width: 678px) {
+    body {
+        min-height: 900px;
+        display: grid;
+        place-items: center;
+    }
+
+    .rcard {
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 10px 10px 30px -15px rgba(151, 151, 151, 0.5);
+        border-radius: 2rem;
+        overflow: hidden;
+        margin-inline: 1rem;
+    }
+
+    .myresult {
+        border-radius: 2rem;
+    }
+}
+
+/* Footer */
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+
+.attribution a { 
+    font-size: 11px;
+    color: hsl(228, 45%, 44%);
+}
